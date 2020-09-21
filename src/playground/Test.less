@@ -1,0 +1,37 @@
+body {
+  background-color: @background;
+  color: @text;
+}
+.test1 {
+  background-color: @primary;
+  box-shadow: @shadow lighten(@primary, 20%);
+}
+.test2 {
+  background-color: @success;
+  box-shadow: @shadow lighten(@success, 20%);
+}
+.test3 {
+  background-color: @error;
+  box-shadow: @shadow lighten(@error, 20%);
+}
+.test4 {
+  background-color: @text;
+  box-shadow: @shadow lighten(@text, 20%);
+}
+
+.test1,
+.test2,
+.test3,
+.test4 {
+  color: @content;
+  border-radius: @radius;
+  padding: @gutter;
+  text-align: center;
+}
+
+.card {
+  background-color: @content;
+  border-radius: @radius;
+  padding: @gutter;
+  box-shadow: @shadow lighten(@text, 30%);
+}
