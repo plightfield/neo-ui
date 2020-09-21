@@ -1,0 +1,30 @@
+.neo-divider-vertical {
+  padding: 0 @gutter;
+  color: @text;
+}
+.neo-divider-herizon {
+  position: relative;
+  height: 0.1em;
+  background-color: @border;
+  margin: @gutter+ @gutter 0;
+  .neo-divider-herizon-text {
+    background-color: @content;
+    padding: 0 1em;
+    position: absolute;
+  }
+  .neo-divider-center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .neo-divider-left {
+    left: 20%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .neo-divider-right {
+    right: 20%;
+    top: 50%;
+    transform: translate(50%, -50%);
+  }
+}

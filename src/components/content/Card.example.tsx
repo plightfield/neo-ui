@@ -8,8 +8,8 @@ export default defineComponent({
       <Card
         title='卡片'
         v-slots={{
-          extra: <div>额外内容</div>,
-          footer: <div>底部操作栏</div>,
+          extra: () => <div>额外内容</div>,
+          footer: () => <div>底部操作栏</div>,
         }}
       >
         <div>主体内容</div>
