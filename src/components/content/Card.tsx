@@ -19,6 +19,10 @@ const neoCardPoto = {
     type: Boolean,
     default: true,
   },
+  light: {
+    type: Boolean,
+    default: false,
+  },
 };
 
 export interface NeoCardProps {
@@ -26,6 +30,7 @@ export interface NeoCardProps {
   hover: boolean;
   title: string;
   headerBordered: boolean;
+  light: boolean;
 }
 
 export default defineComponent({
@@ -38,6 +43,7 @@ export default defineComponent({
           "neo-card": true,
           "neo-card-hover": props.hover,
           "neo-card-shadow": props.shadow,
+          "neo-card-light": props.light,
         }}
       >
         <div

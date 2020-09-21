@@ -1,0 +1,46 @@
+.neo-icon {
+  margin: 0 @gutter*.5;
+  svg {
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: 3px;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+    animation: icon-stroke 1s;
+  }
+}
+.neo-icon-infinite {
+  svg {
+    animation: icon-stroke 2s infinite alternate-reverse;
+  }
+}
+
+.neo-icon-rotate {
+  svg {
+    animation: icon-rotate 2s infinite;
+  }
+}
+
+@keyframes icon-rotate {
+  0% {
+    transform: rotate(0deg);
+    stroke-dashoffset: 100;
+  }
+  50% {
+    transform: rotate(180deg);
+    stroke-dashoffset: 0;
+  }
+  100% {
+    transform: rotate(360deg);
+    stroke-dashoffset: 100;
+  }
+}
+@keyframes icon-stroke {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

@@ -68,6 +68,14 @@ export default defineComponent({
             失效按钮
           </Button>
         </Space>
+        <Title level={3}>带 icon 的按钮</Title>
+        <Button type='primary' icon='home'>
+          首页
+        </Button>
+        <Title level={3}>按钮 loading 状态</Title>
+        <Button type='primary' icon='home' loading>
+          首页
+        </Button>
       </Card>
     );
   },

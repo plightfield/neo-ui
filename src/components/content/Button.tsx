@@ -1,11 +1,12 @@
 import { defineComponent, ref, renderSlot } from "vue";
 import "./Button.less";
+import Icon from "./Icon";
 
 const neoButtonPoto = {
   htmlType: { type: String, default: "button" },
   type: { type: String, default: "default" },
   size: { type: String, default: "normal" },
-  icon: { type: String, default: "circle" },
+  icon: { type: String, default: "" },
   long: { type: Boolean, default: false },
   disabled: { type: Boolean, default: false },
   loading: { type: Boolean, default: false },
@@ -42,6 +43,7 @@ export default defineComponent({
           "neo-button-long": props.long,
         }}
         onClick={() => {
+          if (props.disabled || props.loading) return;
           clicked.value = true;
           setTimeout(() => {
             clicked.value = false;
@@ -49,6 +51,8 @@ export default defineComponent({
         }}
       >
         <button style='display:none' type={props.htmlType as any}></button>
+        {props.loading ? <Icon rotate /> : null}
+        {props.icon ? <Icon name={props.icon} /> : null}
         {renderSlot(ctx.slots, "default")}
       </div>
     );
