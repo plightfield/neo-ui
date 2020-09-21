@@ -18,7 +18,7 @@ module.exports = {
           gutter: ".8em",
           // content background
           content: "#ffffff",
-          // box shadow
+          // box shadow,text shadow
           shadow: "0 .5em 1em 0",
         },
       },

@@ -1,13 +1,15 @@
 import { defineComponent } from "vue";
 import "./App.less";
-import Test from "@/playground/Test";
+import TitleExample from "@/components/content/Title.example";
+import CardExample from "@/components/content/Card.example";
 
 export default defineComponent({
   name: "App",
   setup() {
     return () => (
       <div>
-        <Test />
+        <TitleExample />
+        <CardExample />
       </div>
     );
   },
