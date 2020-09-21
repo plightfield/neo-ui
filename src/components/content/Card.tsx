@@ -1,4 +1,4 @@
-import { defineComponent, renderSlot, resolveDirective } from "vue";
+import { defineComponent, renderSlot } from "vue";
 import Title from "./Title";
 import "./Card.less";
 

@@ -9,10 +9,11 @@ export default defineComponent({
         title='卡片'
         v-slots={{
           extra: <div>额外内容</div>,
-          default: <div>主体内容</div>,
           footer: <div>底部操作栏</div>,
         }}
-      ></Card>
+      >
+        <div>主体内容</div>
+      </Card>
     );
   },
 });
