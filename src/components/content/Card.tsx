@@ -15,12 +15,17 @@ const neoCardPoto = {
     type: String,
     default: "",
   },
+  headerBordered: {
+    type: Boolean,
+    default: true,
+  },
 };
 
 export interface NeoCardProps {
   shadow: boolean;
   hover: boolean;
   title: string;
+  headerBordered: boolean;
 }
 
 export default defineComponent({
@@ -35,7 +40,12 @@ export default defineComponent({
           "neo-card-shadow": props.shadow,
         }}
       >
-        <div class='neo-card-header'>
+        <div
+          class={{
+            "neo-card-header": true,
+            "neo-card-header-bordered": props.headerBordered,
+          }}
+        >
           {props.title ? (
             <Title level={2}>{props.title}</Title>
           ) : (
