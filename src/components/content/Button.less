@@ -1,0 +1,96 @@
+.neo-button {
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+  border-radius: @radius*2;
+  transition: box-shadow 0.2s;
+  position: relative;
+  overflow: visible;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: none;
+    opacity: 0.36;
+    background-color: inherit;
+    border-radius: inherit;
+    content: "";
+    pointer-events: none;
+  }
+}
+
+.neo-button-normal {
+  padding: @gutter @gutter*3;
+  font-size: 1em;
+}
+.neo-button-small {
+  padding: @gutter @gutter*3;
+  font-size: 0.8em;
+}
+.neo-button-large {
+  padding: @gutter @gutter*3;
+  font-size: 1.2em;
+}
+
+.neo-button-wave {
+  &::before {
+    display: block;
+    animation: wave 0.3s;
+  }
+  @keyframes wave {
+    0% {
+      opacity: 0.36;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.neo-button-default {
+  background-color: @content;
+  color: @text;
+  box-shadow: @shadow lighten(@text, 30%);
+  &:hover {
+    box-shadow: @shadow lighten(@text, 20%);
+  }
+}
+.neo-button-primary {
+  background-color: @primary;
+  color: @content;
+  box-shadow: @shadow lighten(@primary, 20%);
+  &:hover {
+    box-shadow: @shadow lighten(@primary, 10%);
+  }
+}
+.neo-button-success {
+  background-color: @success;
+  color: @content;
+  box-shadow: @shadow lighten(@success, 20%);
+  &:hover {
+    box-shadow: @shadow lighten(@success, 10%);
+  }
+}
+.neo-button-error {
+  background-color: @error;
+  color: @content;
+  box-shadow: @shadow lighten(@error, 20%);
+  &:hover {
+    box-shadow: @shadow lighten(@error, 10%);
+  }
+}
+
+.neo-button-disabled {
+  cursor: not-allowed;
+  filter: brightness(0.7);
+}
+
+.neo-button-long {
+  display: block !important;
+  overflow: hidden;
+}
