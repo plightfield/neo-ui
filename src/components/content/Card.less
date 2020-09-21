@@ -3,6 +3,7 @@
   margin: @gutter 0;
   border-radius: @radius;
   background-color: @content;
+  transition: box-shadow 0.3s;
 }
 
 .neo-card-shadow {
@@ -10,8 +11,9 @@
 }
 
 .neo-card-hover {
-  transition: box-shadow 0.3s;
-  box-shadow: @shadow lighten(@text, 20%);
+  &:hover {
+    box-shadow: @shadow lighten(@text, 20%);
+  }
 }
 
 .neo-card-header {
@@ -19,7 +21,7 @@
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid lighten(@text, 30%);
+  border-bottom: 0.1em @border solid;
 }
 
 .neo-card-content {

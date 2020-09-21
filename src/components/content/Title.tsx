@@ -21,7 +21,7 @@ export default defineComponent({
       const Element: any = "h" + level;
       return (
         <Element
-          class={{ "neo-title": true, "neo-title-underline": level >= 3 }}
+          class={{ "neo-title": true, "neo-title-underline": level > 3 }}
         >
           {renderSlot(ctx.slots, "default")}
         </Element>

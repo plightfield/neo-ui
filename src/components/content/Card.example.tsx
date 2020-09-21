@@ -6,11 +6,11 @@ export default defineComponent({
   setup() {
     return () => (
       <Card
-        title='text'
+        title='卡片'
         v-slots={{
-          extra: <div>test</div>,
-          default: <div>test</div>,
-          footer: <button>test</button>,
+          extra: <div>额外内容</div>,
+          default: <div>主体内容</div>,
+          footer: <div>底部操作栏</div>,
         }}
       ></Card>
     );

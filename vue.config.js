@@ -20,6 +20,7 @@ module.exports = {
           content: "#ffffff",
           // box shadow,text shadow
           shadow: "0 .5em 1em 0",
+          border: "#e8e5e3",
         },
       },
     },
