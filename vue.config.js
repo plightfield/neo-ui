@@ -17,7 +17,7 @@ module.exports = {
           // the gutter bettween some elements
           gutter: ".8em",
           // content background
-          content: "#f1f3f6",
+          content: "#f5f8fc",
           // content that be emphasiz
           light: "#ffffff",
           // box shadow,text shadow

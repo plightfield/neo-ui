@@ -15,7 +15,14 @@ export const Row = defineComponent({
   setup(props, ctx) {
     provide("neo-row-props", props);
     return () => (
-      <div style={{ position: "relative", margin: "0 -" + props.gutter }}>
+      <div
+        style={{
+          position: "relative",
+          margin: "0 -" + props.gutter,
+          overflow: "hidden",
+          width: "100%",
+        }}
+      >
         {renderSlot(ctx.slots, "default")}
       </div>
     );
@@ -41,6 +48,7 @@ export const Col = defineComponent({
         style={{
           display: "inline-block",
           width: (100 / rowProps.num) * (props.offset + props.span) + "%",
+          verticalAlign: "top",
         }}
       >
         <div
