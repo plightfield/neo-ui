@@ -5,8 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "doc": "typedoc --out ./doc ./src"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -23,6 +22,7 @@
     "@vue/compiler-sfc": "^3.0.0",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
+    "typedoc": "^0.19.2",
     "typescript": "~3.9.3"
   },
   "browserslist": [
