@@ -10,6 +10,7 @@ const neoButtonPoto = {
   long: { type: Boolean, default: false },
   disabled: { type: Boolean, default: false },
   loading: { type: Boolean, default: false },
+  onClick: { type: Function, default: () => () => {} },
 };
 
 export interface NeoButtonProps {
@@ -20,10 +21,12 @@ export interface NeoButtonProps {
   long: boolean;
   disabled: boolean;
   loading: boolean;
+  onClick: any;
 }
 
 export default defineComponent({
   name: "neo-button",
+  event: ["click"],
   props: neoButtonPoto,
   setup(props: NeoButtonProps, ctx) {
     const clicked = ref(false);
@@ -44,6 +47,7 @@ export default defineComponent({
         }}
         onClick={() => {
           if (props.disabled || props.loading) return;
+          ctx.emit("click");
           clicked.value = true;
           setTimeout(() => {
             clicked.value = false;
